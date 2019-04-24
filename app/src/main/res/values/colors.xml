@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/dark_sky_blue</color>
+    <color name="colorPrimaryDark">@color/windows_blue</color>
+    <color name="colorAccent">@color/dark_sky_blue</color>
+
+    <color name="tabSelectedColor">#0000FF</color>
+
+    <color name="windows_blue">#3b8bb4</color>
+    <color name="dark_sky_blue">#4aaee2</color>
+    <color name="dark_sky_blue_20">#334aaee2</color>
+    <color name="dark_sky_blue_two">#44ace4</color>
+    <color name="dark_sky_blue_pressed">#75B2D7</color>
+    <color name="dark_sky_blue_30">#c84aaee2</color>
+    <color name="cobalt">#19438e</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_70">#b2ffffff</color>
+    <color name="white_pressed">#e4e4e4</color>
+    <color name="white_two">#dcdcdc</color>
+    <color name="white_seven">#f7f7f7</color>
+    <color name="white_three">#e5e5e5</color>
+    <color name="white_four">#f2f2f2</color>
+    <color name="white_five">#f8f8f8</color>
+    <color name="white_six">#e8e8e8</color>
+
+    <color name="black">#000000</color>
+    <color name="black_26">#42000000</color>
+    <color name="black_30">#46000000</color>
+    <color name="black_38">#61000000</color>
+    <color name="black_54">#8a000000</color>
+    <color name="black_54_disabled">#3e000000</color>
+    <color name="black_70">#b3000000</color>
+    <color name="black_87">#de000000</color>
+
+    <color name="gray">#d1d1d1</color>
+    <color name="gray2">#dadada</color>
+    <color name="gray3">#efefef</color>
+    <color name="warm_grey">#7a7a7a</color>
+    <color name="warm_grey_two">#757575</color>
+    <color name="warm_grey_three">#9e9e9e</color>
+    <color name="warm_grey_bottom_shadow">#929393</color>
+    <color name="pinkish_grey">#c5c5c5</color>
+    <color name="pinkish_grey_two">#d1d1d1</color>
+    <color name="slate_grey">#6d6d72</color>
+
+    <color name="tomato">#ef4c41</color>
+    <color name="tangerine">#fd9302</color>
+    <color name="lightblue">#96d1f3</color>
+    <color name="lightblue_40">#6696d1f3</color>
+    <color name="butterscotch">#ffad3d</color>
+    <color name="butterscotch_30">#4cffad3d</color>
+
+    <color name="lightblue_two">#74c5f3</color>
+    <color name="shamrock">#00b458</color>
+    <color name="six_c">#CCCCCC</color>
+</resources>

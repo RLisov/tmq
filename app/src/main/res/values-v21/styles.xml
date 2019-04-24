@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="ProgressDialogTheme" parent="AlertDialogBaseTheme"/>
+
+    <style name="SpinnerTheme" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowButtonStyle">@style/MoreOptionButtonOverflow</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+</resources>

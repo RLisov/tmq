@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="typeface" format="string"/>
+    <attr name="titleText" format="string"/>
+    <attr name="subtitleText" format="string"/>
+
+    <declare-styleable name="TypeFaceTextView">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <declare-styleable name="TypeFaceEditText">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <declare-styleable name="TwoLinedTextView">
+        <attr name="titleText"/>
+        <attr name="subtitleText"/>
+    </declare-styleable>
+
+    <declare-styleable name="TwoLinedTextEdit">
+        <attr name="titleText"/>
+        <attr name="subtitleText"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxAdvanced">
+        <attr name="text" format="string"/>
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableLeftPadding" format="dimension"/>
+        <attr name="contentPaddingLeft" format="dimension"/>
+        <attr name="contentPaddingRight" format="dimension"/>
+        <attr name="typeface"/>
+    </declare-styleable>
+
+</resources>

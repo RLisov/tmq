@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tamaq.courier">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name=".shared.TamaqApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification"/>
+
+        <activity
+            android:name=".presenters.activities.SplashScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presenters.main.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".presenters.region_select.RegionSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presenters.activities.NewOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presenters.activities.CountrySelectActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_geo_api_key"/>
+
+        <activity
+            android:name=".presenters.tabs.orders.order_cancel.OrderCancelActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presenters.activities.WebViewInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".presenters.activities.ConcreteChatActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".presenters.activities.MapRouteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presenters.activities.AutoRateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".presenters.activities.EstimateClientActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- [START firebase_service] -->
+        <service android:name=".controllers.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".controllers.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_iid_service] -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a48c731393ac70de078dd8d9127c9ebe9be49d5e"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/system_path_fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <service
+            android:name=".controllers.service.LocationTrackService"
+            android:enabled="true"
+            android:exported="true"/>
+
+
+    </application>
+
+</manifest>

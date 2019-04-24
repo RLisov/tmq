@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-medium"
+            app:titleTextColor="@color/black">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/enter_your_phone_number"
+            android:textColor="@color/black_54"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_phone"
+                />
+
+            <EditText
+                android:id="@+id/countryCodeEditText"
+                style="@style/Registration.EditText"
+                android:layout_width="72dp"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:focusable="false"
+                android:longClickable="false"
+                android:theme="@style/Registration.EditText"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                style="@style/Registration.EditText"
+                android:layout_marginStart="@dimen/login_number_start_margin"
+                android:digits="0123456789"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:theme="@style/Registration.EditText"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/getCodeAndEnterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/selector_blue_button"
+            android:enabled="false"
+            android:paddingEnd="17dp"
+            android:paddingStart="17dp"
+            android:text="@string/get_code_and_enter"
+            android:textColor="@color/blue_button_text_color"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_timer_sign_in"
+                android:gravity="center"
+                android:text="00:30"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/registrationButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/registration_action"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_sky_blue"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include layout="@layout/app_loader"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

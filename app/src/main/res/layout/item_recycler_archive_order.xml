@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/lyt_container"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/elementContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:id="@+id/textsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toStartOf="@+id/dateTextView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black_87"
+                android:textSize="16sp"
+                tools:text="Запланировання доставка"/>
+
+            <TextView
+                android:id="@+id/orderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="50sp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:textColor="@color/black_54"
+                android:textSize="14sp"
+                tools:text="Заказ А22354"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textsContainer"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:textColor="@color/black_38"
+            android:textSize="14sp"
+            tools:text="ул. Сарыарка 22 - Сакена Сейфуллина 25"/>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black_38"
+            android:textSize="12sp"
+            tools:text="29 сент, 21:39"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/addressTextView"
+            android:layout_marginTop="12dp"
+            android:background="@color/white_three"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

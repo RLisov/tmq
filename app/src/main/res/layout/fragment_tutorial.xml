@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/firstDot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:scaleType="center"
+            android:src="@drawable/combined_shape"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/secondDot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:scaleType="center"
+            android:src="@drawable/oval_724"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/thirdDot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:scaleType="center"
+            android:src="@drawable/oval_724"
+            tools:ignore="ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/fourthDot"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:scaleType="center"
+            android:src="@drawable/oval_724"
+            tools:ignore="ContentDescription"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/black_26"
+        android:textSize="13sp"
+        />
+
+</RelativeLayout>

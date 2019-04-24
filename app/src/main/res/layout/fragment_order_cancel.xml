@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/white"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:titleTextColor="@color/white">
+
+            <Button
+                android:id="@+id/buttonReady"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/ready"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.tamaq.courier.widgets.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/select_reason_from_list"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="16sp"
+                app:typeface="Roboto_Medium.ttf"/>
+
+            <com.tamaq.courier.widgets.CheckBoxAdvanced
+                android:id="@+id/notHaveTimeCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:contentPaddingLeft="13dp"
+                app:contentPaddingRight="10dp"
+                app:text="@string/do_not_have_time"/>
+
+            <com.tamaq.courier.widgets.CheckBoxAdvanced
+                android:id="@+id/transportOutOfOrderCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPaddingLeft="13dp"
+                app:contentPaddingRight="10dp"
+                app:text="@string/transport_out_of_order"/>
+
+            <com.tamaq.courier.widgets.CheckBoxAdvanced
+                android:id="@+id/anotherReasonCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPaddingLeft="13dp"
+                app:contentPaddingRight="10dp"
+                app:text="@string/another_reason"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/white_three"/>
+
+            <com.tamaq.courier.widgets.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/type_cancel_reason"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="16sp"
+                app:typeface="Roboto_Medium.ttf"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cancelReasonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/reason_of_cancel_is"
+                android:paddingEnd="16dp"
+                android:paddingStart="12dp"
+                android:textColorHint="@color/black_26"
+                app:counterEnabled="true"
+                app:counterMaxLength="300"
+                app:counterOverflowTextAppearance="@style/EditText.CounterOverflowTextAppearance"
+                app:counterTextAppearance="@style/EditText.CounterTextAppearance"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/cancelReasonTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="text|textCapSentences|textMultiLine"
+                    android:textColor="@color/black_87"
+                    android:textSize="16sp"
+                    android:theme="@style/EditText"
+                    app:theme="@style/EditText"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:id="@+id/countryElementContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_checkable_item"
+        android:clickable="true"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        >
+
+        <TextView
+            android:id="@+id/countryNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:textColor="@color/selector_checkable_item_color"
+            android:textSize="16sp"
+            tools:text="Украина"
+            />
+
+        <TextView
+            android:id="@+id/countryCodeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|end"
+            android:textColor="@color/selector_checkable_item_color"
+            android:textSize="16sp"
+            tools:text="+380"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

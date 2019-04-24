@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:paddingEnd="5dp"
+            app:titleTextColor="@color/black"
+            tools:ignore="RtlSymmetry">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <ScrollView
+        android:id="@+id/mainContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:ignore="MissingPrefix">
+
+            <com.tamaq.courier.widgets.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/take_orders"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="16sp"
+                app:typeface="Roboto_Medium.ttf"/>
+
+            <LinearLayout
+                android:id="@+id/notReceiveView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:alpha="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="false"
+                android:paddingBottom="13dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="13dp"
+                tools:ignore="RtlSymmetry">
+
+                <RadioButton
+                    android:id="@+id/notReceiveRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="19dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:theme="@style/RadioButton"
+                    app:theme="@style/RadioButton"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/not_to_accept"
+                        android:textColor="@color/black_87"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_will_not_receive_orders"
+                        android:textColor="@color/black_38"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/receiveAllView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="false"
+                android:paddingBottom="13dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="13dp"
+                tools:ignore="RtlSymmetry">
+
+                <RadioButton
+                    android:id="@+id/receiveAllRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="19dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:theme="@style/RadioButton"
+                    app:theme="@style/RadioButton"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/consider_all_orders"
+                        android:textColor="@color/black_87"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consider_all_orders_description"
+                        android:textColor="@color/black_38"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/autoRateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.25"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="false"
+                android:paddingBottom="13dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="13dp"
+                tools:ignore="RtlSymmetry">
+
+                <RadioButton
+                    android:id="@+id/autoRateRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="19dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:theme="@style/RadioButton"
+                    app:theme="@style/RadioButton"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/auto_rate"
+                        android:textColor="@color/black_87"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/auto_rate_description"
+                        android:textColor="@color/black_38"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white_three"/>
+
+            <com.tamaq.courier.widgets.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/payment_for_work"
+                android:textColor="@color/dark_sky_blue"
+                android:textSize="16sp"
+                app:typeface="Roboto_Medium.ttf"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="@string/select_minimum_payment"
+                android:textColor="@color/black_54"/>
+
+            <com.tamaq.courier.widgets.TwoLinedTextEdit
+                android:id="@+id/minimumPaymentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:divider="@drawable/horizontal_divider"
+                android:focusable="true"
+                android:showDividers="end"
+                app:subtitleText="50"
+                app:titleText="@string/orders_from"/>
+
+            <com.tamaq.courier.widgets.TwoLinedTextView
+                android:id="@+id/autoRateParamsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:divider="@drawable/horizontal_divider"
+                android:focusable="true"
+                android:showDividers="end"
+                app:subtitleText="@string/by_default"
+                app:titleText="@string/auto_rate_parameters"/>
+
+            <Spinner
+                android:id="@+id/transportSpinner"
+                style="@style/SpinnerTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                tools:layout_height="70dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/accessDeniedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_four"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_access_denied"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/access_denied_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autoLink="email"
+            android:gravity="center"
+            android:text="@string/access_denied_description"
+            android:textColor="@color/black_54"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/disabledGPSLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_four"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <ImageView
+            style="@style/GeoLocationDisabled"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_geolocation_disabled"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="@string/disabled_geolocation_message_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingEnd="32dp"
+            android:paddingStart="32dp"
+            android:text="@string/disabled_geolocation_message_description"/>
+
+        <Button
+            android:id="@+id/enableGpsButton"
+            style="@style/BlueButton"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="34dp"
+            android:text="@string/set_up_action"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cityNotSupportedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_four"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_city_empty"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="@string/not_supported_city_title_with_dot"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingEnd="32dp"
+            android:paddingStart="32dp"
+            android:text="@string/not_supported_city_description"/>
+
+        <Button
+            android:id="@+id/cityChangeButton"
+            style="@style/BlueButton"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="34dp"
+            android:text="@string/change_city"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/app_bar_shadow"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

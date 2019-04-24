@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-medium"
+            app:titleTextColor="@color/black">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/codeSendToYouNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/code_send_to_you_number"
+            android:textColor="@color/black_54"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_lock"/>
+
+            <EditText
+                android:id="@+id/codeEditText"
+                style="@style/Registration.EditText"
+                android:digits="0123456789"
+                android:hint="@string/code_from_sms"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:theme="@style/Registration.EditText"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendSmsAgainButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="-10dp"
+            android:enabled="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/i_do_not_have_sms"
+            android:textAllCaps="false"
+            android:textColor="@color/black_54_with_disabled_color"/>
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/selector_blue_button"
+            android:enabled="false"
+            android:minWidth="216dp"
+            android:paddingEnd="17dp"
+            android:paddingStart="17dp"
+            android:text="@string/agree"
+            android:textColor="@color/blue_button_text_color"
+            android:textSize="14sp"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/registrationButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/registration_action"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_sky_blue"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

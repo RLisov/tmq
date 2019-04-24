@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="#1e000000">
+    <item>
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:drawable="@drawable/bg_btn_dissabled"
+                android:state_enabled="false"/>
+            <item android:drawable="@drawable/bg_btn_blue_normal"/>
+
+        </selector>
+    </item>
+</ripple>

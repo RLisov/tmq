@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/white"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:subtitleTextAppearance="@style/ToolbarTwoLinedSubtitleAppearance"
+            app:subtitleTextColor="@color/white_70"
+            app:titleTextAppearance="@style/ToolbarTwoLinedTitleAppearance"
+            app:titleTextColor="@color/white">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@drawable/horizontal_divider"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/ratingContainerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="2dp"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.tamaq.courier.widgets.TypeFaceTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/card_view_top_corners"
+                        android:gravity="center"
+                        android:text="@string/you_rated_the_client"
+                        android:textColor="@color/black_87"
+                        android:textSize="14sp"
+                        app:typeface="Roboto_Medium.ttf"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/positiveImageView"
+                                android:layout_width="58dp"
+                                android:layout_height="58dp"
+                                android:background="@drawable/selector_estimate_button_bg"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                android:src="@drawable/selector_estimate_positive_button_src"/>
+
+                            <TextView
+                                android:id="@+id/positiveTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/positively"
+                                android:textColor="@color/color_selector_estimate_positive"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/negativeImageView"
+                                android:layout_width="58dp"
+                                android:layout_height="58dp"
+                                android:background="@drawable/selector_estimate_button_bg"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                android:src="@drawable/selector_estimate_negative_button_src"/>
+
+                            <TextView
+                                android:id="@+id/negativeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/negative"
+                                android:textColor="@color/color_selector_estimate_negative"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/moneyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.tamaq.courier.widgets.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="26dp"
+                    android:text="@string/money"
+                    android:textColor="@color/dark_sky_blue"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/ic_profit"/>
+
+                    <TextView
+                        style="@style/Profile.TextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/money_for_delivery"/>
+
+                    <com.tamaq.courier.widgets.AutoResizeTextView
+                        android:id="@+id/profitTextView"
+                        style="@style/AutoResizeTextViewMoneyStyle"
+                        android:gravity="end"
+                        android:textColor="@color/black_54"
+                        tools:text="140₸"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/ic_cash"/>
+
+                    <TextView
+                        style="@style/Profile.TextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/client_owes"/>
+
+                    <com.tamaq.courier.widgets.AutoResizeTextView
+                        android:id="@+id/clientsOweTextView"
+                        style="@style/AutoResizeTextViewMoneyStyle"
+                        android:gravity="end"
+                        android:textColor="@color/black_54"
+                        tools:text="140₸"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/needToReturnContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/ic_change"/>
+
+                    <TextView
+                        style="@style/Profile.TextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/need_cashback_from"/>
+
+                    <com.tamaq.courier.widgets.AutoResizeTextView
+                        android:id="@+id/needChangeFromTextView"
+                        style="@style/AutoResizeTextViewMoneyStyle"
+                        android:gravity="end"
+                        android:textColor="@color/black_54"
+                        tools:text="14 230₸"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/horizontal_divider"/>
+
+            <LinearLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.tamaq.courier.widgets.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/addresses"
+                    android:textColor="@color/dark_sky_blue"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/location_restaurant"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/restaurantAddressTextView"
+                            style="@style/Profile.TextView"
+                            android:layout_gravity="start"
+                            tools:text="ул. Сарыарка, 22"/>
+
+                        <TextView
+                            android:id="@+id/restaurantNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_38"
+                            tools:text="Адрес ресторана “Le Croissant”"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/location_client"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/clientAddressTextView"
+                            style="@style/Profile.TextView"
+                            android:layout_gravity="start"
+                            tools:text="ул. Сакена Сейфуллина 55, этаж 2, кв./оф. 23"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address_client"
+                            android:textColor="@color/black_38"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/horizontal_divider"/>
+
+            <LinearLayout
+                android:id="@+id/chronologyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.tamaq.courier.widgets.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/chronology"
+                    android:textColor="@color/dark_sky_blue"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="top"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_work_time_54"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/timeEventsRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/emptyTimeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/statistics_empty_text"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/horizontal_divider"/>
+
+            <LinearLayout
+                android:id="@+id/helpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.tamaq.courier.widgets.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/help"
+                    android:textColor="@color/dark_sky_blue"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <LinearLayout
+                    android:id="@+id/dispatcherPhoneContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <ImageView
+                        style="@style/Registration.Icon"
+                        android:src="@drawable/ic_headset_mic"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dispatcherPhoneTextView"
+                            style="@style/Profile.TextView"
+                            android:layout_gravity="start"
+                            tools:text="+375291234567"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dispatcher"
+                            android:textColor="@color/black_38"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/horizontal_divider"/>
+
+            <Button
+                android:id="@+id/goToChatButton"
+                style="@style/WhiteButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/go_to_chat"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+

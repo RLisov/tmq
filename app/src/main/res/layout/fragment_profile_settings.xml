@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:subtitleTextAppearance="@style/ToolbarTwoLinedSubtitleAppearance"
+            app:titleTextAppearance="@style/ToolbarTwoLinedTitleAppearance">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:id="@+id/userImageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userAvatarImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@drawable/user_pik_80"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/ic_camera"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/mobileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userImageContainer"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_phone"/>
+
+            <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/ic_arrow_down"/>
+
+                <EditText
+                    android:id="@+id/countryCode"
+                    style="@style/Registration.EditText"
+                    android:focusable="false"
+                    android:inputType="text"
+                    tools:ignore="LabelFor"/>
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/mobile"
+                style="@style/Registration.EditText"
+                android:layout_marginStart="32dp"
+                android:hint="@string/mobile_number"
+                android:inputType="number"
+                android:maxLength="10"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cityContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mobileContainer"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_location_54"/>
+
+            <EditText
+                android:id="@+id/workingCity"
+                style="@style/Registration.EditText"
+                android:focusable="false"
+                android:hint="@string/work_city"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transportContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityContainer"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="21dp">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_car"/>
+
+            <Spinner
+                android:id="@+id/transportSpinner"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeSpinner"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveChangesButton"
+            style="@style/BlueButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transportContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/save_changes"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:theme="@style/Theme.AppCompat"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

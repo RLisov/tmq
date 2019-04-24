@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/lyt_container"
+             android:layout_width="match_parent"
+             android:layout_height="88dp"
+             android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/elementContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="?attr/selectableItemBackground"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="13dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/user_pik_80"/>
+
+        <LinearLayout
+            android:id="@+id/textsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/avatarImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Борис"/>
+
+            <TextView
+                android:id="@+id/userAddressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="50sp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:textColor="@color/black_38"
+                android:textSize="14sp"
+                tools:text="ул. Сарыарка 22 - Сакена Сейфdfffdfffffffdf"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/messagePreviewTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textsContainer"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/avatarImage"
+            android:layout_toStartOf="@+id/notificationCountTextView"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:textColor="@color/black_54"
+            android:textSize="14sp"
+            tools:text="Lorem "/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black_38"
+            android:textSize="12sp"
+            tools:text="15 мин"/>
+
+        <com.tamaq.courier.widgets.TypeFaceTextView
+            android:id="@+id/notificationCountTextView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textsContainer"
+            android:background="@drawable/chat_avatar_background"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:typeface="Roboto_Medium.ttf"
+            tools:text="1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="56dp"
+            android:background="@color/white_three"
+
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tomato"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        android:paddingStart="24dp"
+        android:visibility="gone"
+        android:weightSum="3"
+        tools:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/deleteTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/dialog_removed"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            />
+
+        <com.tamaq.courier.widgets.TypeFaceTextView
+            android:id="@+id/undoTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/dismiss"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:typeface="Roboto_Medium.ttf"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

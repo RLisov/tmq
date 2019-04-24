@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/lyt_container"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/elementContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toStartOf="@id/timeTextView"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="Заказ завершен bcgjkybntkmcndfj"/>
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:textColor="@color/black_38"
+            android:textSize="14sp"
+            tools:text="Заказ А22354 был завершен. Он будет перенесен на завтра"/>
+
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:textColor="@color/black_38"
+            android:textSize="12sp"
+            tools:text="29 июня, 21:43"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/descriptionTextView"
+            android:layout_marginTop="16dp"
+            android:background="@color/white_three"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

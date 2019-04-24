@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:subtitleTextAppearance="@style/ToolbarTwoLinedSubtitleAppearance"
+            app:titleTextAppearance="@style/ToolbarTwoLinedTitleAppearance">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userAvatarImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/emptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_four"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingEnd="32dp"
+            android:paddingStart="32dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_chat_empty"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/order_completed"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/no_messages_in_chat"
+                android:textColor="@color/black_54"
+                android:textSize="14sp"
+                />
+
+
+        </LinearLayout>
+
+        <com.tamaq.courier.widgets.swipeToRefreshBottom.SwipeRefreshLayoutBottom
+            android:id="@+id/swipeRefreshLayoutBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sendMessageContainer">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/sendMessageContainer"
+                />
+
+        </com.tamaq.courier.widgets.swipeToRefreshBottom.SwipeRefreshLayoutBottom>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/sendMessageContainer"
+            android:background="@drawable/bottom_chat_shadow"/>
+
+
+        <RelativeLayout
+            android:id="@+id/sendMessageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_four"
+            android:minHeight="48dp"
+
+            android:paddingStart="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/cameraImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_camera_dark"
+                />
+
+            <EditText
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/cameraImageView"
+                android:layout_toStartOf="@+id/sendMessageButton"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_write_msg"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:minHeight="32dp"
+                android:minLines="1"
+                android:paddingBottom="4dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="@string/lorem_ipsum"
+                />
+
+            <ImageView
+                android:id="@+id/sendMessageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/messageText"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/messageText"
+                android:layout_marginTop="-16dp"
+                android:alpha="0.50"
+                android:clickable="false"
+                android:minHeight="24dp"
+                android:minWidth="24dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:scaleType="center"
+                android:src="@drawable/friends_active"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/white"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:titleTextColor="@color/white">
+
+            <Button
+                android:id="@+id/buttonReady"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/ready"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@drawable/horizontal_divider"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:showDividers="middle|end"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.tamaq.courier.widgets.TypeFaceTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/card_view_top_corners"
+                        android:gravity="center"
+                        android:text="@string/estimate_client_request"
+                        android:textColor="@color/black_87"
+                        android:textSize="14sp"
+                        app:typeface="Roboto_Medium.ttf"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/positiveImageView"
+                                android:layout_width="58dp"
+                                android:layout_height="58dp"
+                                android:background="@drawable/selector_estimate_button_bg"
+                                android:clickable="true"
+                                android:scaleType="center"
+                                android:src="@drawable/selector_estimate_positive_button_src"/>
+
+                            <TextView
+                                android:id="@+id/positiveTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/positively"
+                                android:textColor="@color/color_selector_estimate_positive"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/negativeImageView"
+                                android:layout_width="58dp"
+                                android:layout_height="58dp"
+                                android:background="@drawable/selector_estimate_button_bg"
+                                android:clickable="true"
+                                android:scaleType="center"
+                                android:src="@drawable/selector_estimate_negative_button_src"/>
+
+                            <TextView
+                                android:id="@+id/negativeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/negative"
+                                android:textColor="@color/color_selector_estimate_negative"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/reasonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.tamaq.courier.widgets.TypeFaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/what_exactly_did_you_dislike"
+                    android:textColor="@color/dark_sky_blue"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/tell_more_to_improve_our_service"
+                    android:textColor="@color/black_38"
+                    android:textSize="14sp"
+                    app:typeface="Roboto_Medium.ttf"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/commentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/write_review"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="12dp"
+                    android:textColorHint="@color/black_26"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="300"
+                    app:counterOverflowTextAppearance="@style/EditText.CounterOverflowTextAppearance"
+                    app:counterTextAppearance="@style/EditText.CounterTextAppearance"
+                    app:errorEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/commentTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:inputType="text|textCapSentences|textMultiLine"
+                        android:textColor="@color/black_87"
+                        android:textSize="16sp"
+                        android:theme="@style/EditText"
+                        app:theme="@style/EditText"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/tipsSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="@string/client_not_leave_tip"
+                android:textColor="@color/black_87"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:switchPadding="10dp"
+                app:thumbTextPadding="10dp"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/infoView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackground"
+                android:drawableEnd="@drawable/ic_info_dark"
+                android:gravity="start|center"
+                android:paddingEnd="18dp"
+                android:paddingStart="16dp"
+                android:text="@string/info_about_order"
+                android:textColor="@color/black_87"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

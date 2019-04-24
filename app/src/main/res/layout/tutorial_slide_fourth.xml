@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/image"
+        style="@style/TutorialScreen.Image"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/help_screen_4"
+        tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+
+        <com.tamaq.courier.widgets.TypeFaceTextView
+            style="@style/TutorialScreen.MainText"
+            android:text="@string/fourth_slide_first_text"
+            app:typeface="Roboto_Medium.ttf"
+            />
+
+        <TextView
+            style="@style/TutorialScreen.SecondText"
+            android:text="@string/fourth_slide_second_text"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textContainer"
+        android:layout_marginTop="16dp"
+        >
+
+        <Button
+            android:id="@+id/tutorialEnter"
+            style="@style/WhiteButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="2dp"
+            android:text="@string/enter_btn_text"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/tutorialRegistration"
+            style="@style/BlueButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="2dp"
+            android:text="@string/registration_btn_text"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

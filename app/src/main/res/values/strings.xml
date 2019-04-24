@@ -1,0 +1,466 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="google_geo_api_key">AIzaSyBnIYieRdiJYaxAClcJ4KecW8bWE9kIju8</string>
+
+    <string name="app_name">Tamaq</string>
+    <string name="server_not_response">Сервер не отвечает</string>
+    <string name="title_orders">Заказы</string>
+    <string name="title_chat">Чат с клиентом</string>
+    <string name="title_payment">Платежи</string>
+    <string name="title_notification">Уведомления</string>
+    <string name="title_profile">Кабинет</string>
+    <string name="first_slide_main_text">Регистрация и начало работы</string>
+    <string name="first_slide_second_text">Заполните информацию о себе.\nОжидайте подтверждения от модераторов.\nДоставляйте заказы и зарабатывайте.</string>
+    <string name="second_slide_first_text">Заказы в ручном и авто режиме</string>
+    <string name="second_slide_second_text">Установите, сколько хотите зарабатывать.\nНастройте предпочтения для автоставки и принимайте заказы автоматически.</string>
+    <string name="third_slide_first_text">Будьте на связи</string>
+    <string name="third_slide_second_text">Во время работы с сервисом\nпередавайте данные о своем геоположении на сервер.</string>
+    <string name="fourth_slide_first_text">Следите за финансами</string>
+    <string name="fourth_slide_second_text">Стоимость каждого заказа\nбудет вычитаться с вашего счета.\nВовремя пополняйте баланс и смотрите его историю.</string>
+    <string name="registration_btn_text">Регистрация</string>
+    <string name="enter_btn_text">Вход</string>
+    <string name="skip">Пропустить</string>
+
+    <string name="welcome_to_tamaq">Добро пожаловать\nв сервис доставки “Tamaq”</string>
+    <string name="welcome_screen_second_text">Для начала работы вам необходимо войти или зарегистрироваться.</string>
+    <string name="add_photo_title">ДОБАВИТЬ ФОТО</string>
+    <string name="add_first_identity_photo">Добавьте фото первой страницы\nудостоверения личности</string>
+    <string name="add_second_identity_photo">Добавьте фото второй страницы\nудостоверения личности</string>
+    <string name="photo_1">Фото №1</string>
+    <string name="photo_2">Фото №2</string>
+    <string name="menu_take_photo">Сделать фото</string>
+    <string name="menu_choose_from_gallery">Выбрать из галереи</string>
+    <string name="menu_delete_photo">Удалить фото</string>
+    <string name="identification">Удостоверение личности</string>
+    <string name="name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="mobile_number">Номер мобильного</string>
+    <string name="rnn">РНН</string>
+    <string name="age">Возраст</string>
+    <string name="work_city">Город работы</string>
+    <string name="agree_text">Я соглашаюсь с правилами использования сервиса и политикой конфиденциальности</string>
+    <string name="agree">Подтвердить</string>
+    <string name="enter_to_account">Войти в учетную запись</string>
+    <string name="chosenOneIdentificationPhoto">Выбрана 1 фотография</string>
+    <string name="chosenTwoIdentificationPhoto">Выбрано 2 фотографии</string>
+
+    <string name="login">Вход</string>
+    <string name="new_order">Новый заказ</string>
+    <string name="can_make_it">Запрос на исполнительство</string>
+    <string name="order_cancel">Отмена заказа</string>
+    <string name="get_code_and_enter">получить код и войти</string>
+    <string name="registration_action">Зарегистрироваться</string>
+    <string name="enter_your_phone_number">Введите ваш номер телефона</string>
+    <string name="enter_code">Введите код</string>
+    <string name="code_send_to_you_number">Код выслан на номер %1$s</string>
+    <string name="code_from_sms">Код из смс</string>
+    <string name="i_do_not_have_sms">Мне не приходит смс</string>
+
+    <string name="registration">Регистрация</string>
+    <string name="thanks_for_registration_title">Спасибо за регистрацию.</string>
+    <string name="thanks_for_registration_description">Ваш статус как курьера проверяется, ожидайте уведомления.</string>
+    <string name="wrong_sms_code">Неправильный код.\nПовторите попытку</string>
+    <string name="ok">OK</string>
+    <string name="sms_sent_again">Вам выслано еще одно сообщение с кодом</string>
+    <string name="please_call_technical_support_1">Пожалуйста, свяжитесь с поддержкой</string>
+    <string name="please_call_technical_support_2">support@tamaq.kz</string>
+    <string name="info">Информация</string>
+    <string name="info_about_order">Информация о заказе</string>
+    <string name="take_orders">Принимать заказы</string>
+    <string name="not_to_accept">Не принимать</string>
+    <string name="all_city">Весь город</string>
+    <string name="all_city_description">Автоматическая ставка будет поставлена на заказ из любой точки города.</string>
+    <string name="around_me">Вокруг меня</string>
+    <string name="around_me_description">Автоматическая ставка создает окружность, где центральная точка — ваше геоположение. Окружность передвигается вместе с вами и ставка делается на каждый заказ, который охватывается кругом.</string>
+    <string name="single_region">Отдельный район</string>
+    <string name="region">Район</string>
+    <string name="single_region_description">Автоматическая ставка будет ставиться на заказы из этого района.</string>
+    <string name="you_will_not_receive_orders">Вам не будут поступать заказы.</string>
+    <string name="consider_all_orders">Рассматриваю все заказы</string>
+    <string name="consider_all_orders_description">Вам будут поступать все заказы, и вы сможете принять их или отказаться.</string>
+    <string name="auto_rate">Автоставка</string>
+    <string name="auto_rate_description">Вам будут автоматически поступать заказы, соответствующие параметрам автоставки.</string>
+    <string name="payment_for_work">Оплата работы</string>
+    <string name="select_minimum_payment">Укажите минимальную оплату за заказ, которую вы хотели бы получать.</string>
+    <string name="orders_from">Заказы от</string>
+    <string name="auto_rate_parameters">Параметры автоставки</string>
+    <string name="transport">Транспорт</string>
+    <string name="title_auto_rate_params">Параметры автоставки</string>
+    <string name="auto_rate_geography">География автоставки</string>
+    <string name="not_selected">Не выбран</string>
+    <string name="minutes_count">%1$d мин.</string>
+    <string name="maximum_delivery_time">Максимальное время доставки</string>
+    <string name="minimum_client_rating">Минимальный рейтинг клиента</string>
+    <string name="maximum_kitchen_payment">Максимальная цена кухни</string>
+    <string name="working_radius">Радиус окружности</string>
+    <string name="kilometers_value">%d км</string>
+    <string name="region_select_title">Выбор района</string>
+    <string name="by_default">По умолчанию</string>
+    <string name="configured">Настроены</string>
+
+    <string name="arrive_restaurant_minutes">Прибудьте в ресторан в %1$s, чтобы забрать заказ.</string>
+
+    <string name="country">Страна</string>
+    <string name="search">Поиск</string>
+    <string name="search_with_ellipsis">Поиск…</string>
+    <string name="order_search_with_ellipsis">Поиск заказа…</string>
+    <string name="country_search_hint">Поиск страны…</string>
+    <string name="working_city">Город работы</string>
+    <string name="nothing_to_display">По вашему запросу ничего не найдено</string>
+    <string name="try_again">Попробуйте еще раз</string>
+    <string name="money">Деньги</string>
+    <string name="payment_for_order">Прибыль за заказ</string>
+    <string name="addresses">Адреса</string>
+    <string name="address_format_with_street_number">%1$s, %2$s</string>
+    <string name="address_format_detailed">%1$s, %2$s, этаж %3$s</string>
+    <string name="route">Маршрут</string>
+    <string name="accept_order">Принять заказ</string>
+    <string name="to_cancel">Отказаться</string>
+
+    <string name="time_is_over">Время вышло</string>
+    <string name="time_is_over_dialog_title">Время вышло.</string>
+    <string name="time_is_over_dialog_description">Вы не успели принять заказ. Ожидайте поступления новых заказов.</string>
+    <string name="time">Время</string>
+
+    <string name="refuse_the_order_dialog_title">Отказаться от заказа?</string>
+    <string name="refuse_the_order_dialog_description">Вы действительно хотите отказаться от этого заказа?</string>
+    <string name="refuse_action">Отказаться</string>
+    <string name="not_refuse_action">Не отказываться</string>
+    <string name="accept_order_dialog_title">Принять заказ.</string>
+    <string name="accept_order_dialog_description">Нажав "Принять" вы обязуетесь осуществить доставку заказа в случае выбора вашей кандидатуры.</string>
+    <string name="accept_action">Принять</string>
+    <string name="cancel_action">Отменить</string>
+    <string name="cancel">Отмена</string>
+    <string name="you_accepted_order">Вы откликнулись на этот заказ.</string>
+    <string name="wait_for_customer_choice">Подождите, заказчик делает выбор курьера…</string>
+    <string name="chat_with_client">Чат с клиентом</string>
+    <string name="empty_chat_title">В чате нет переписки.</string>
+    <string name="empty_chat_description">Здесь будет отображаться ваша переписка с заказчиками.</string>
+    <string name="dismiss">Отменить</string>
+    <string name="dialog_removed">Переписка удалена</string>
+    <string name="hint_write_msg">Напишите сообщение…</string>
+    <string name="order_completed">Заказ завершен.</string>
+    <string name="order_completed_without_dot">Заказ завершен</string>
+    <string name="no_messages_in_chat">В чате не было переписки с заказчиком.</string>
+    <string name="disabled_geolocation_message_title">У вас отключена геолокация.</string>
+    <string name="disabled_geolocation_title">Отключена геолокация</string>
+    <string name="not_supported_city_title">Не поддерживаемый город</string>
+    <string name="not_supported_city_title_with_dot">Не поддерживаемый город.</string>
+    <string name="not_supported_city_description">Спасибо за регистрацию. Сеть Tamaq пока не добралась до вашего города. Когда это случится, Вам прийдет СМС.</string>
+    <string name="set_up_action">Настроить</string>
+    <string name="change_city">Изменить город</string>
+    <string name="disabled_geolocation_message_description">Для более корректной работы приложения и обеспечения лучшего взаимодействия с заказчиками включите геолокацию в настройках.</string>
+    <string name="go_to_map">Перейти на карту</string>
+    <string name="payment_for_delivery">Прибыль за доставку</string>
+    <string name="customer_must">Клиент должен</string>
+    <string name="need_change_from">Нужна сдача с</string>
+    <string name="contact">Связь</string>
+    <string name="dispatcher">Диспетчер</string>
+    <string name="restaurant">Ресторан</string>
+    <string name="restaurant_address">Адрес ресторана “%1$s”</string>
+    <string name="client_name">Заказчик %1$s</string>
+    <string name="cancel_order">Отменить заказ</string>
+    <string name="go_to_restaurant">Отправляюсь в ресторан</string>
+    <string name="arrived_in_restaurant">Прибыл в ресторан</string>
+    <string name="go_to_customer">Отправляюсь к заказчику</string>
+    <string name="arrived_to_customer">Прибыл к заказчику</string>
+    <string name="complete_order">Завершить заказ</string>
+    <string name="congratulations">Поздравляем.</string>
+    <string name="congratulations_without_dot">Поздравляем</string>
+    <string name="you_successfully_passed_check">Вы успешно прошли проверку и теперь можете выполнять заказы.</string>
+    <string name="client_chosen_you">Заказчик выбрал вас для исполнения заказа.</string>
+    <string name="current_order_title">Заказ %1$s</string>
+
+    <string name="time_accepted">Заказ принят</string>
+    <string name="time_arrive_to_restaurant">Прибыть в ресторан</string>
+    <string name="time_deliver_order">Доставить заказ</string>
+    <string name="ready">Готово</string>
+    <string name="select_reason_from_list">Выберите причину из списка*</string>
+    <string name="choose_region_for_orders">Выберите район из которого будете получать заказы</string>
+    <string name="what_exactly_did_you_dislike">Что именно вам не понравилось?*</string>
+    <string name="tell_more_to_improve_our_service">Расскажите больше, чтобы мы могли улучшить наш сервис</string>
+    <string name="type_cancel_reason">Введите причину отмены*</string>
+    <string name="reason_of_cancel_is">Отмена заказа состоялась по причине…</string>
+    <string name="do_not_have_time">Не успеваю</string>
+    <string name="transport_out_of_order">Транспорт вышел из строя</string>
+    <string name="another_reason">Другая причина</string>
+    <string name="please_select_cancel_reason">Пожалуйста, укажите причину отмены заказа</string>
+    <string name="please_select_reason">Пожалуйста, укажите причину</string>
+    <string name="you_must_estimate_client">Необходимо оценить заказчика</string>
+    <string name="select_at_least_one_reason">Пожалуйста, выберите хотя бы одну причину из списка</string>
+    <string name="order_canceled">Заказ отменен.</string>
+    <string name="contact_dispatcher_if_necessary">В случае необходимости свяжитесь с диспетчером.</string>
+    <string name="estimate_client">Оценить заказчика</string>
+    <string name="estimate_client_request">Оцените заказчика</string>
+    <string name="positively">Положительно</string>
+    <string name="negative">Отрицательно</string>
+    <string name="client_not_leave_tip">Клиент не оставил чаевые</string>
+    <string name="write_review">Напишите отзыв…</string>
+    <string name="max_length_of_comment_300">Максимальная длина комментария - 300 символов</string>
+    <string name="connection_lost_message">Связь потеряна. Проверьте подключение к сети интернет или свяжитесь с диспетчером.</string>
+    <string name="enable_data_transfer">Включить передачу данных</string>
+    <string name="call_dispatcher">Связаться с диспетчером</string>
+    <string name="you_not_transfer_data_to_server">Вы не отдаете данные на сервер. Включите передачу данных в настройках телефона.</string>
+    <string name="you_can_receive_order_after_confirmation">Заказы можно принимать после подтверждения регистрации. Ожидайте уведомление.</string>
+
+    <string name="html_demo" tools:ignore="TypographyDashes">
+        <![CDATA[<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+<h1 style="color: #5e9ca0;">You can edit <span style="color: #2b2301;">this demo</span> text!</h1>
+<h2 style="color: #2e6c80;">How to use the editor:</h2>
+<p>Paste your documents in the visual editor on the left or your HTML code in the source editor in the right. <br />Edit any of the two areas and see the other changing in real time.&nbsp;</p>
+<p>Click the <span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-workingRadius: 5px;">Clean</span> button to clean your source code.</p>
+<h2 style="color: #2e6c80;">Some useful features:</h2>
+<ol style="list-style: none; font-size: 14px; line-height: 32px; font-weight: bold;">
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/01-interactive-connection.png" alt="interactive connection" width="45" /> Interactive source editor</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/02-html-clean.png" alt="html cleaner" width="45" /> HTML Cleaning</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/03-docs-to-html.png" alt="Word to html" width="45" /> Word to HTML conversion</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/04-replace.png" alt="replace text" width="45" /> Find and Replace</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/05-gibberish.png" alt="gibberish" width="45" /> Lorem-Ipsum generator</li>
+<li style="clear: both;"><img style="float: left;" src="https://html-online.com/img/6-table-div-html.png" alt="html table div" width="45" /> Table to DIV conversion</li>
+</ol>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<h2 style="color: #2e6c80;">Cleaning options:</h2>
+<table class="editorDemoTable">
+<thead>
+<tr>
+<td>Name of the feature</td>
+<td>Example</td>
+<td>Default</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove tag attributes</td>
+<td><img style="margin: 1px 15px;" src="images/smiley.png" alt="laughing" width="40" height="16" /> (except <strong>img</strong>-<em>src</em> and <strong>a</strong>-<em>href</em>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove inline styles</td>
+<td><span style="color: green; font-size: 13px;">You <strong style="color: blue; text-decoration: underline;">should never</strong>&nbsp;use inline styles!</span></td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Remove classes and IDs</td>
+<td><span id="demoId">Use classes to <strong class="demoClass">style everything</strong>.</span></td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Remove all tags</td>
+<td>This leaves <strong style="color: blue;">only the plain</strong> <em>text</em>. <img style="margin: 1px;" src="images/smiley.png" alt="laughing" width="16" height="16" /></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove successive &amp;nbsp;s</td>
+<td>Never use non-breaking spaces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to set margins.</td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Remove empty tags</td>
+<td>Empty tags should go!</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove tags with one &amp;nbsp;</td>
+<td>This makes&nbsp;no sense!</td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Remove span tags</td>
+<td>Span tags with <span style="color: green; font-size: 13px;">all styles</span></td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Remove images</td>
+<td>I am an image: <img src="images/smiley.png" alt="laughing" /></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove links</td>
+<td><a href="https://html-online.com">This is</a> a link.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove tables</td>
+<td>Takes everything out of the table.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Replace table tags with structured divs</td>
+<td>This text is inside a table.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Remove comments</td>
+<td>This is only visible in the source editor <!-- HELLO! --></td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Encode special characters</td>
+<td><span style="color: red; font-size: 17px;">&hearts;</span> <strong style="font-size: 20px;">☺ ★</strong> &gt;&lt;</td>
+<td><strong style="font-size: 17px; color: #2b2301;">x</strong></td>
+</tr>
+<tr>
+<td>Set new lines and text indents</td>
+<td>Organize the tags in a nice tree view.</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Save this link into your bookmarks and share it with your friends. It is all FREE! </strong><br /><strong>Enjoy!</strong></p>
+<p><strong>&nbsp;</strong></p>]]>
+    </string>
+    <string name="html_lorem_ipsum" tools:ignore="TypographyDashes">
+        <![CDATA[
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+]]>
+    </string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="terms_of_use_title">Пользовательское соглашение</string>
+    <string name="image">Изображение</string>
+    <string name="customer_order_completed">Заказчик (заказ завершен)</string>
+    <string name="customer">Заказчик</string>
+    <string name="hours"> ч</string>
+    <string name="minutes"> мин</string>
+    <string name="empty_chart_title">Данных для отображения нет</string>
+    <string name="empty_chart_description">Тут будет отображаться информация относительно вашего баланса в Tamaq.</string>
+    <string name="recharge">ПОПОЛНИТЬ</string>
+    <string name="all_time">Всё время</string>
+    <string name="week">Неделя</string>
+    <string name="month">Месяц</string>
+    <string name="year">Год</string>
+    <string name="write_off">Списание</string>
+    <string name="earn">Пополнение</string>
+    <string name="balance">Баланс:</string>
+    <string name="go_to_order">ПЕРЕЙТИ К ЗАКАЗУ</string>
+    <string name="temp_manager_number">+375291234567</string>
+    <string name="automatic_operation">Автоматическая операция</string>
+    <string name="operation_description">Описание операции</string>
+    <string name="help">Помощь</string>
+    <string name="search_city">Поиск города…</string>
+    <string name="tenge_sign">₸</string>
+
+    <string name="font_family_medium">sans-serif</string>
+    <string name="exit">Выход</string>
+    <string name="new_message">Новое сообщение</string>
+    <string name="new_message_from_in_chat">У вас новое непрочитанное сообщение</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+    <string name="notification_is_empty">Уведомлений нет</string>
+    <string name="notifications_empty_description">У вас пока нет уведомлений</string>
+    <string name="go_to_chat">ПЕРЕЙТИ К ЧАТУ</string>
+    <string name="system_path_fileprovider">com.tamaq.courier.fileprovider</string>
+    <string name="notification_new_message_description">Вам пришло сообщение от заказчика</string>
+    <string name="order_route">Маршрут заказа</string>
+    <string name="choose_region">Выбрать район</string>
+    <string name="order">Заказ</string>
+    <string name="profile_settings">Настройки профиля</string>
+    <string name="payments_methods">Платежные методы</string>
+    <string name="orders_archive">Архив заказов</string>
+    <string name="contact_dispatcher">Связь с диспетчером</string>
+    <string name="save_changes">СОХРАНИТЬ ИЗМЕНЕНИЯ</string>
+    <string name="my_cabinet">Мой кабинет</string>
+    <string name="discard">Отменить</string>
+    <string name="exit_dialog">Выйти</string>
+    <string name="discard_dialog">ОТМЕНА</string>
+    <string name="exit_title">Выйти из учетной записи “Tamaq”?</string>
+    <string name="to">по</string>
+    <string name="from">Период: с</string>
+    <string name="no_orders">Заказов пока нет.</string>
+    <string name="no_orders_description">Все ваши заказы будут сохраняться здесь.</string>
+    <string name="order_number">Заказ %d</string>
+    <string name="settings_saved">Настройки сохранены</string>
+    <string name="verification_code">Вам выслан код в смс для верификации телефона</string>
+    <string name="empty_string"/>
+    <string name="money_for_delivery">Прибыль за доставку</string>
+    <string name="client_owes">Клиент должен</string>
+    <string name="need_cashback_from">Нужна сдача с</string>
+    <string name="address_client">Адрес заказчика</string>
+    <string name="order_accepted">Заказ принят</string>
+    <string name="moving_to_the_restaurant">Отправление в ресторан</string>
+    <string name="arrived_to_the_restaurant">Прибытие в ресторан</string>
+    <string name="order_took_from_the_restaurant">Заказ забран из ресторана</string>
+    <string name="arrived_to_the_client">Прибытие к клиенту</string>
+    <!--<string name="order_competed">Завершение заказа</string>-->
+    <string name="you_rated_the_client">Вы оценили заказчика</string>
+    <string name="restaurant_address_name">Адрес ресторана “%s”</string>
+    <string name="chronology">Хронология</string>
+    <string name="new_messages_from">Новые сообщения от:</string>
+    <string name="new_messages">Новых сообщений:</string>
+    <string name="lost_network_connection">Связь с интернетом потеряна.</string>
+    <string name="check_network_connection">Проверьте подключение к сети интернет или включите передачу данных в настройках телефона.</string>
+    <string name="new_messages_in_chat">Новые сообщения в чате</string>
+    <string name="positive_valuations">%d%% положительных отзывов</string>
+    <string name="no_rating">отзывов нет</string>
+    <string name="bonus">Бонус</string>
+    <string name="paybonus">Бонус платы</string>
+    <string name="moneyback">Возврат средств</string>
+    <string name="commission">Коммисия</string>
+    <string name="handfill">Ручное пополнение</string>
+    <string name="fill">Пополнение</string>
+    <string name="you_selected_executor">Вас выбрали исполнителем</string>
+    <string name="customer_not_choose_any_candidate">Заказчик не выбрал ни одного из кандидатов</string>
+    <string name="customer_selected_another_candidate">Заказчик выбрал другого кандидата для исполнения заказа</string>
+    <string name="you_not_selected_executor">Вас не выбрали исполнителем</string>
+    <string name="new_chat">Новое сообщение</string>
+    <string name="order_published">Опубликован заказ</string>
+    <string name="order_executor_selected">В заказе выбран исполнитель</string>
+    <string name="order_confirmed">Заказ подтвержен</string>
+    <string name="order_done">Заказ завершен</string>
+    <string name="order_executor_cancel">Заказ отменен исполнителем</string>
+    <string name="order_customer_cancel">Заказ отменен заказчиком</string>
+    <string name="order_overdue">Заказ просрочен</string>
+    <string name="draft">Заказ создан</string>
+    <string name="find_executor">Поиск исполнителя</string>
+    <string name="executor_selected">Заказ принят</string>
+    <string name="going_to_restaurant">Отправление в ресторан</string>
+    <string name="arrived_at_restaurant">Прибытие в ресторан</string>
+    <string name="going_to_customer">Отправление к заказчику</string>
+    <string name="order_statistics_overdue">Заказ просрочен</string>
+    <string name="order_statistics_cancel_customer">Заказ отменен клиентом</string>
+    <string name="order_statistics_cancel_executor">Заказ отменен исполнителем</string>
+    <string name="statistics_empty_text">Нет информации</string>
+    <string name="no_messages">Нет сообщений</string>
+    <string name="order_statistics_published">Заказ опубликован</string>
+    <string name="your_auto_rate_win">Ваша автоставка выиграла и вы получили новый заказ</string>
+    <string name="delete_message">Удалить сообщение</string>
+    <string name="resend_message">Повторить отправку</string>
+    <string name="days">дн</string>
+    <string name="access_denied_title">Кажется вас заблокировали.</string>
+    <string name="access_denied_description">Ваш профиль был заблокирован.\nВы можете связаться с администрацией Tamak написав на электронную почту\nhelp@tamak.com.</string>
+    <string name="access_denied">Доступ запрещён</string>
+    <string name="error_first_ident_photo">Пожалуйста, добавьте фото первой страницы</string>
+    <string name="error_second_ident_photo">Пожалуйста, добавьте фото второй страницы</string>
+    <string name="error_set_name">Пожалуйста, укажите имя</string>
+    <string name="error_set_last_name">Пожалуйста, укажите фамилию</string>
+    <string name="error_incorrect_mobile">Пожалуйста, исправьте номер мобильного</string>
+    <string name="error_incorrect_rnn">Длина РНН должна быть 12 символов</string>
+    <string name="error_incorrect_age">Возраст должен быть в пределах 21 – 90 лет</string>
+    <string name="error_empty_mobile">Укажите номер мобильного</string>
+    <string name="error_empty_rnn">Пожалуйста, укажите регистрационный номер налогоплательщика</string>
+    <string name="error_empty_age">Пожалуйста, укажите возраст</string>
+    <string name="duty">Списание</string>
+    <string name="right_now">Только что</string>
+    <string name="name_not_defined">Имя не задано</string>
+    <string name="user_agreement_url">https://tamaq.kz/docs/user_agreement.html</string>
+    <string name="cant_choose_separate_district">В вашем городе нет возможности выбрать отдельный район</string>
+    <string name="replenishment">Пополнение</string>
+    <string name="status_order_confirmed">Заказ подтверждён</string>
+    <string name="distance_is_too_long">Слишком большое расстояние</string>
+    <string name="arrive_restaurant_minutes_and_time">Прибудьте в ресторан в %1$s, чтобы забрать заказ.</string>
+
+    <string-array name="month">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+</resources>

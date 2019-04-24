@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="welcome_image_top_margin">100dp</dimen>
+    <dimen name="login_number_start_margin">32dp</dimen>
+</resources>

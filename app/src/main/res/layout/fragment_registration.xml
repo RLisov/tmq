@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:typeface="Roboto_Medium.ttf"
+            >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <FrameLayout
+                    android:id="@+id/photoContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/photo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/avatar_background"
+                        android:src="@drawable/user_pik_80"/>
+
+                    <ImageView
+                        android:id="@+id/takePhoto"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:src="@drawable/ic_camera"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_toEndOf="@id/photoContainer"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/nameInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/name"
+                            style="@style/Registration.EditText"
+                            android:hint="@string/name"
+
+                            android:inputType="text|textPersonName|textCapSentences"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/lastNameInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+                    <EditText
+                        android:id="@+id/lastName"
+                        style="@style/Registration.EditText"
+                        android:hint="@string/last_name"
+                        android:inputType="text|textPersonName|textCapSentences"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_phone"/>
+
+                <FrameLayout
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/ic_arrow_down"/>
+
+                    <EditText
+                        android:id="@+id/countryCode"
+                        style="@style/Registration.EditText"
+                        android:focusable="false"
+                        tools:ignore="LabelFor"/>
+
+                </FrameLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/mobileInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/mobile"
+                    style="@style/Registration.EditText"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/rnnInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/rnn"
+                    style="@style/Registration.EditText"
+                    android:hint="@string/rnn"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_cake"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ageInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/age"
+                    style="@style/Registration.EditText"
+                    android:hint="@string/age"
+                    android:inputType="number"
+                    android:maxLength="2"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:src="@drawable/ic_location_54"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/cityInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/workingCity"
+                    style="@style/Registration.EditText"
+                    android:focusable="false"
+                    android:hint="@string/work_city"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:src="@drawable/ic_car"/>
+
+                <Spinner
+                    android:id="@+id/transportSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeSpinner"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    style="@style/Registration.Icon"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_identity_card"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/identificationInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/identification"
+                    style="@style/Registration.EditText"
+                    android:focusable="false"
+                    android:hint="@string/identification"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <android.support.design.internal.ForegroundLinearLayout
+                android:id="@+id/checkboxContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:alpha="0.50"/>
+
+                <TextView
+                    android:id="@+id/termsOfUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:text="@string/agree_text"/>
+
+
+            </android.support.design.internal.ForegroundLinearLayout>
+
+
+            <Button
+                android:id="@+id/apply"
+                style="@style/BlueButton"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="24dp"
+                android:enabled="false"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/registration_btn_text"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:theme="@style/Theme.AppCompat"
+                />
+
+
+            <TextView
+                android:id="@+id/registrationEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+
+                android:text="@string/enter_to_account"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include layout="@layout/app_loader"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

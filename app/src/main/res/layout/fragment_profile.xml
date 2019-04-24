@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:ignore="ContentDescription">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/dark_sky_blue"
+            android:fontFamily="sans-serif-medium"
+            app:subtitleTextAppearance="@style/ToolbarTwoLinedSubtitleAppearance"
+            app:titleTextAppearance="@style/ToolbarTwoLinedTitleAppearance">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userAvatarImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            tools:src="@drawable/user_pik_80"/>
+
+        <com.tamaq.courier.widgets.TypeFaceTextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAvatarImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            app:typeface="Roboto_Medium.ttf"
+            tools:text="Георгий Георгиев"
+            />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userNameTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black_38"
+            tools:text="87% положительных отзывов"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ratingTextView"
+            android:layout_marginTop="20dp"
+            android:background="@color/white_three"/>
+
+        <LinearLayout
+            android:id="@+id/profileSettingsContainerView"
+            style="@style/Profile.Container"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_profile_settings"/>
+
+            <TextView
+                style="@style/Profile.TextView"
+                android:text="@string/profile_settings"/>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:mId="@+mId/paymentsMethodsContainerView"-->
+        <!--style="@style/Profile.Container"-->
+        <!--android:layout_below="@mId/profileSettingsContainerView">-->
+
+        <!--<ImageView-->
+        <!--style="@style/Registration.Icon"-->
+        <!--android:src="@drawable/ic_card" />-->
+
+        <!--<TextView-->
+        <!--style="@style/Profile.TextView"-->
+        <!--android:text="@string/payments_methods" />-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ordersArchiveContainerView"
+            style="@style/Profile.Container"
+            android:layout_below="@id/profileSettingsContainerView">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_archive"/>
+
+            <TextView
+                style="@style/Profile.TextView"
+                android:text="@string/orders_archive"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactDispatcherContainerView"
+            style="@style/Profile.Container"
+            android:layout_below="@id/ordersArchiveContainerView"
+            android:alpha="0.5"
+            android:clickable="false">
+
+            <ImageView
+                style="@style/Registration.Icon"
+                android:src="@drawable/ic_headset_mic"/>
+
+            <TextView
+                style="@style/Profile.TextView"
+                android:text="@string/contact_dispatcher"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/app_bar_shadow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include
+        layout="@layout/app_loader"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
