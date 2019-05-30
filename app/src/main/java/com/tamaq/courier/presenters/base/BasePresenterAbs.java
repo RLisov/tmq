@@ -66,6 +66,7 @@ public abstract class BasePresenterAbs<View extends BaseView> implements BasePre
                 Log.i("RxLifecycle", "See: https://github.com/trello/RxLifecycle/tree/2.x#unsubscription", throwable);
         } else {
             throwable.printStackTrace();
+
             if (getView() != null) getView().showError(throwable.getMessage());
         }
     }
